@@ -20,10 +20,10 @@ def index():
 
     # enforce auth
     authorized = False
-    for editor in authorized_redir_editors:
+    for user in authorized:
         if (request.authorization and
-                editor['usr'] == request.authorization.username and
-                editor['pass'] == request.authorization.password):
+                user['usr'] == request.authorization.username and
+                user['pass'] == request.authorization.password):
             authorized = True
             break
     if not authorized:
