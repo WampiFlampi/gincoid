@@ -5,7 +5,7 @@ from flask import Flask, request, render_template, Response, redirect
 
 app = Flask(__name__)
 
-authorized = json.loads(
+users = json.loads(
     environ['AUTHORIZED'])
 
 force_https = (environ['FORCE_HTTPS'] == 'true')
@@ -20,7 +20,7 @@ def index():
 
     # enforce auth
     authorized = False
-    for user in authorized:
+    for user in users:
         if (request.authorization and
                 user['usr'] == request.authorization.username and
                 user['pass'] == request.authorization.password):
